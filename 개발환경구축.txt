@@ -1,0 +1,81 @@
+[개발 환경 구축하기]
+  * 다운받은 프로그램(툴)들은 별도의 폴더를 만들어서 저장 관리합니다.
+    (재사용할 경우를 위함)
+    예를 들어 
+    자바 관련 도구일 경우 : C:\devtools\java_tools
+    파이선 관련 : C:\devtools\python_tools
+    데이터베이스 관련 : C:\devtoos\db_tools
+
+1. jdk 다운 설치
+   openJDK 11 버전 다운 > 저장 폴더로 옮김
+   https://jdk.java.net/archive/
+   * 오라클 jdk 는 설치파일을 다운받게 됨 > 다운받은 파일 더블클릭 > 설치함
+   * openjdk 는 zip 파일, 설치파일 둘 중 선택해서 다운함 
+	=> 설치파일은 오라클 jdk 와 동일하게 설치함
+	=> zip 파일은 압축만 풀면 됨  
+   * 설치할 경우에는 기본으로, c:\program files\java 폴더가 생기고, 그 아래에
+	jdk버전 폴더로 설치됨
+   * 압축을 푼 jdk는 압축푼 폴더 안에 있는 'jdk-11.0.2' 폴더 복사해서,
+	c:\program files 아래에 Java 폴더(폴더 만들기함, 첫글자 대문자로 함)
+	> 아래에 붙여넣기함
+
+2. 환경변수 path 에 등록
+   : 컴퓨터 안 어디서나 jdk\bin 아래에 있는 명령도구들을 사용하게 하기 위함
+   => 파일 탐색기에서 주소표시줄에서 
+	'C:\Program Files\Java\jdk-11.0.2' 경로 복사함
+   => 파일 탐색기에서 '내pc' 에 마우스 우클릭 > 속성
+   => 설정 창에서 '고급시스템 설정' 선택
+   => 다이얼로그에서 '환경변수' 버튼 클릭
+   => 사용자변수 또는 시스템변수 영역의 '새로 만들기' 버튼 클릭
+	변수명 : JAVA_HOME  (반드시 대문자로 작성함)
+	값 : C:\Program Files\Java\jdk-11.0.2  (붙여넣기함)
+   => Path 변수 클릭 > 편집 버튼 클릭
+   => 새로만들기 버튼 클릭 > %JAVA_HOME%\bin  입력 > 엔터
+   => 확인 > 확인 > 확인
+
+3. path 설정 확인
+   => 시작메뉴 마우스 우클릭 > 실행 또는 윈도우로고키 + R
+   => cmd 입력 > 엔터
+   => 명령프롬프트 창에서 > java -version 입력 > 엔터
+   => 11.0.2 버전 숫자 표시되면 완료임
+
+4. 파이선 설치
+   https://www.python.org
+   => 3.9 버전 다운받기 > 실행파일 더블클릭
+   => 아래쪽의 'Add path ... ' 체크하고 'install now' 클릭할 것
+
+5. 파이참 설치
+   https://www.jetbrains.com/ko-kr/pycharm/download/#section=windows
+   => community(무료) 다운받기 클릭 > 다운받은 실행파일 더블클릭
+   => 설치시 option 항목의 체크박스는 모두 체크함
+
+6. 파이선 모듈 자동 관리를 위해 '아나콘다' 추가 설치할 수도 있음
+   https://www.anaconda.com/products/individual
+   => 다운받고, 실행파일 더블클릭
+   => 설치시 체크항목은 모두 체크함
+
+7. 자바 통합개발툴 이클립스 다운받기
+   https://www.eclipse.org/
+   => 2021-09 버전의 enterprise java and web 이클립스 다운받기
+   => zip 파일이므로 압축풀기하면 끝.
+
+8. 오라클 데이터베이스 다운 설치함
+   * 먼저 회원가입(create an account) 함
+   * 무료로 이용할 수 있는 'oracle xe(eXpress Edition)' 모듈을 찾아서 다운함
+   https://www.oracle.com/kr/database/technologies/xe-downloads.html
+   * 로그인하면 다운됨 > zip 파일임
+   * 압축풀어줌 > 압축 푼 폴더 안의 'setup.exe' 파일을 더블 클릭함
+	=> 설치 중 '암호 입력' 부분에서 주의함
+	   오라클 데이터베이스 서버 관리자 암호를 지정하는 것이므로, 절대로
+	   잊어버리면 안 됨.
+	소문자로 oracle 이라고 입력합니다. (반 전체 통일합니다.)
+
+9. 오라클 데이터베이스 서버에 접속하기 위한 클라이언트 툴이 필요함.
+   * 오라클사에서 무료로 사용할 수 있는 'sql developer' 제공함 > 다운받음
+	=> 로그인 필요함
+   => 다운받은 zip 파일 압축 풀기함
+
+10. 자주 사용하는 툴의 아이콘들은 '작업표시줄에 표시' 합니다.
+
+
+
